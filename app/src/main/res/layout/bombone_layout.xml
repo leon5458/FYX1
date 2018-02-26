@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@drawable/white_round_corner_bg"
+        android:layout_width="210dp"
+        android:layout_height="260dp"
+        android:text="协议 \n 一 特别提示\n 1 ooooooooooooooooo \n 2oooooooooooooooo\n 300000000000000"/>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/icon_close"/>
+
+</LinearLayout>

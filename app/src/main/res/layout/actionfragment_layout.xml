@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/one"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="弹框"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/two"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="进度条"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/three"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="信息输入框"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/four"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="日历"/>
+</LinearLayout>

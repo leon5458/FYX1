@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="10dp"
+       android:background="@color/white"
+       android:orientation="horizontal">
+       <TextView
+           android:id="@+id/bomb_one"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="弹框1"/>
+
+       <TextView
+           android:id="@+id/bomb_two"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="弹框2"/>
+
+       <TextView
+           android:id="@+id/bomb_three"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="弹框3"/>
+       <TextView
+           android:id="@+id/bomb_four"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="弹框4"/>
+
+       <TextView
+           android:id="@+id/bomb_five"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="弹框5"/>
+       </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bomb_six"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框6"/>
+
+        <TextView
+            android:id="@+id/bomb_seven"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框7"/>
+
+        <TextView
+            android:id="@+id/bomb_eight"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框8"/>
+        <TextView
+            android:id="@+id/bomb_nine"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框9"/>
+
+        <TextView
+            android:id="@+id/bomb_ten"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bomb11"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框11"/>
+
+        <TextView
+            android:id="@+id/bomb12"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框12"/>
+
+        <TextView
+            android:id="@+id/bomb13"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框13"/>
+        <TextView
+            android:id="@+id/bomb14"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框14"/>
+
+        <TextView
+            android:id="@+id/bomb15"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="弹框15"/>
+    </LinearLayout>
+</LinearLayout>

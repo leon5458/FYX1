@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="BannerDefaultStyle">
+        <!-- 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 -->
+        <!-- 开启自动轮播 -->
+        <item name="banner_pointAutoPlayAble">true</item>
+        <!-- 自动轮播的时间间隔 -->
+        <item name="banner_pointAutoPlayInterval">3000</item>
+        <!-- 指示点容器背景 -->
+        <item name="banner_pointContainerBackground">#44aaaaaa</item>
+        <!-- 指示点背景 -->
+        <item name="banner_pointDrawable">@drawable/bga_banner_selector_point_hollow</item>
+        <!-- 指示点容器左右内间距 -->
+        <item name="banner_pointContainerLeftRightPadding">10dp</item>
+        <!-- 指示点上下外间距 -->
+        <item name="banner_pointTopBottomMargin">6dp</item>
+        <!-- 指示点左右外间距 -->
+        <item name="banner_pointLeftRightMargin">3dp</item>
+        <!-- 指示器的位置 -->
+        <item name="banner_indicatorGravity">bottom|center_horizontal</item>
+        <!-- 页码切换过程的时间长度 -->
+        <item name="banner_pageChangeDuration">800</item>
+        <!-- 提示文案的文字大小 -->
+        <item name="banner_tipTextSize">10sp</item>
+        <!-- 提示文案的文字颜色 -->
+        <item name="banner_tipTextColor">@android:color/white</item>
+
+        <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
+        <!--<item name="banner_placeholderDrawable">@mipmap/dingdanxiangqingtu</item>-->
+    </style>
+
+    <!--弹框-->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--弹框-->
+    <style name="EnterExitAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/exit_anim</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#969696</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--密码输入框-->
+    <declare-styleable name="PswText">
+        <!--密码长度-->
+        <attr name="pswLength" format="integer" />
+        <!--密码框颜色-->
+        <attr name="borderColor" format="color" />
+        <!--密码颜色-->
+        <attr name="pswColor" format="color" />
+        <!--输入时密码框颜色-->
+        <attr name="inputBorder_color" format="color" />
+        <!--输入时密码框阴影颜色-->
+        <attr name="borderShadow_color" format="color" />
+        <!--明文密码文字大小-->
+        <attr name="psw_textSize" format="dimension" />
+        <!--密码框圆角程度-->
+        <attr name="borderRadius" format="dimension" />
+        <!--是否使用图片绘制密码框-->
+        <attr name="isDrawBorderImg" format="boolean" />
+        <!--按back键时，是否需要绘制明文密码-->
+        <attr name="isShowTextPsw" format="boolean" />
+        <!--输入密码时密码框是否有阴影-->
+        <attr name="isShowBorderShadow" format="boolean" />
+        <!--密码框图片-->
+        <attr name="borderImg" format="reference" />
+        <!--输入时变化的密码框图片-->
+        <attr name="inputBorderImg" format="reference" />
+        <!--延迟绘制密码圆点的时间,1000 = 1s-->
+        <attr name="delayTime" format="integer" />
+        <!--是否只绘制明文密码-->
+        <attr name="clearTextPsw" format="boolean" />
+        <!--是否只绘制圆点-->
+        <attr name="darkPsw" format="boolean" />
+        <!--是否在输入密码时不更改密码框颜色-->
+        <attr name="isChangeBorder" format="boolean" />
+    </declare-styleable>
+
+
+    <style name="CheckBox">
+    <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+   <!--城市定位-->
+    <declare-styleable name="WaveSideBar">
+        <attr name="sidebar_lazy_respond" format="boolean" />
+        <attr name="sidebar_text_size" format="dimension" />
+        <attr name="sidebar_text_color" format="color" />
+        <attr name="sidebar_max_offset" format="dimension" />
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

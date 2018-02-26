@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/carservice_context"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="租车服务"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="救援出险"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="违章查询"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="上门去送车"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="车友会"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="现售车型"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="商城"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="共享停车"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="用车Tips"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="更多功能"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/jifen"
+            android:drawablePadding="8dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
