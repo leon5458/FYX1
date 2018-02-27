@@ -78,7 +78,6 @@ public class HpFragment extends BaseFragment {
     @Override
     public void initView() {
         ButterKnife.bind(this, mView);
-
         initItem1();
         initItem2();
         initItem3();
@@ -109,7 +108,6 @@ public class HpFragment extends BaseFragment {
 
         smartRefreshLayout.setEnableLoadmore(true);
 
-
     }
 
     private void initItem4() {
@@ -137,15 +135,9 @@ public class HpFragment extends BaseFragment {
 
     }
 
-/*    @BindView(R.id.recommend_recy)
-    RecyclerView recommend_recy;
-    FyxRecyclerAdapter adapter;
-    List<String> listdata = new ArrayList<>();*/
+
     private void homeItem4(WViewHolder wViewHolder) {
-       /* adapter = new FyxRecyclerAdapter(mActivity, R.layout.recommend_item, listdata);
-        recommend_recy.setLayoutManager(new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false));
-        recommend_recy.addItemDecoration(new DividerItemDecoration(mActivity, DividerItemDecoration.VERTICAL));
-        recommend_recy.setAdapter(adapter);*/
+
     }
 
     private void homeItem3(WViewHolder wViewHolder) {
@@ -156,7 +148,6 @@ public class HpFragment extends BaseFragment {
     }
 
     private void homeItem1(WViewHolder wViewHolder) {
-
     }
 
 

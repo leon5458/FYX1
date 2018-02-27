@@ -164,23 +164,37 @@
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
 
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:background="@color/black"
+                        android:layout_gravity="center"/>
+
                     <TextView
+                        android:id="@+id/moring"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/gray_drawable"
+                        android:layout_weight="0.2"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="上午" />
 
                     <TextView
+                        android:id="@+id/afternoon"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/white_smalldrawable"
+                        android:layout_weight="0.2"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="下午" />
+                    <View
+                        android:layout_height="0.5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:background="@color/black"
+                        android:layout_gravity="center"/>
+
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView

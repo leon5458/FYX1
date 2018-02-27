@@ -16,6 +16,11 @@ import com.fyx.leon.fyx_leon.fragment.ActionFragment;
 import com.fyx.leon.fyx_leon.fragment.HpFragment;
 import com.fyx.leon.fyx_leon.fragment.MyselfFragment;
 import com.fyx.leon.fyx_leon.fragment.ServiceFragment;
+import com.othershe.nicedialog.BaseNiceDialog;
+import com.othershe.nicedialog.NiceDialog;
+import com.othershe.nicedialog.ViewConvertListener;
+import com.othershe.nicedialog.ViewHolder;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -110,6 +115,23 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void getData() {
         setTabSelection(0);//第一次启动默认的tab(0)
+        NiceDialog.init()
+                .setLayoutId(R.layout.hp_show_layout)
+                .setConvertListener(new ViewConvertListener() {
+                    @Override
+                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
+                        holder.setOnClickListener(R.id.close, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+                    }
+                })
+                .setWidth(210)
+                .setOutCancel(true)
+                .setAnimStyle(R.style.EnterExitAnimation)
+                .show(getSupportFragmentManager());
     }
 
     @OnClick({R.id.hp_bottom_layout, R.id.service_bottom_layout, R.id.action_bottom_layout, R.id.myself_bottom_layout})

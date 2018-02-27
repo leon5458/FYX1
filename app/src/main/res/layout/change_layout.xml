@@ -90,7 +90,7 @@
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="@drawable/white_smalldrawable"
-        android:hint="请输入理由"
+        android:hint="请输入理由(多选前面的图像可以自定义)"
         android:gravity="top|left"
         android:padding="8dp"
         android:layout_margin="10dp"/>
