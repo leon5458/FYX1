@@ -293,8 +293,7 @@ public class BombboxActivity extends BaseActivity {
             public void onTimeSelect(Date date, View v) {//选中事件回调
                 // 这里回调过来的v,就是show()方法里面所添加的 View 参数，如果show的时候没有添加参数，v则为null
 
-                TextView txt = (TextView) v;
-                txt.setText(getTime(date));
+
             }
         })
                 //年月日时分秒 的显示与否，不设置则默认全部显示
