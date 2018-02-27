@@ -190,6 +190,7 @@ public class BombboxActivity extends BaseActivity {
             case R.id.bomb11:
                 View view1 = LayoutInflater.from(BombboxActivity.this).inflate(R.layout.toast_item2, null);
                 new ToastUtils(this, view1, Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.bomb12:
                 View view = LayoutInflater.from(BombboxActivity.this).inflate(R.layout.toast_item1, null);
@@ -260,10 +261,10 @@ public class BombboxActivity extends BaseActivity {
             @Override
             public void onOptionsSelect(int options1, int options2, int options3, View v) {
                 //返回的分别是三个级别的选中位置
-                String tx = options1Items.get(options1).getPickerViewText() +
-                        options2Items.get(options1).get(options2) +
-                        options3Items.get(options1).get(options2).get(options3);
-                ToastUtils.showToast("tx");
+//                String tx = options1Items.get(options1).getPickerViewText() +
+//                        options2Items.get(options1).get(options2) +
+//                        options3Items.get(options1).get(options2).get(options3);
+//                ToastUtils.showToast("tx");
             }
         })
                 .setTitleText("城市选择")

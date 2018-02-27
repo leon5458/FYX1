@@ -93,6 +93,10 @@ public class CalendarActivity extends BaseActivity implements CalendarView.OnDat
 
     @Override
     protected void setListener() {
+        mCalendarView.setOnYearChangeListener(this);
+        mCalendarView.setOnDateSelectedListener(this);
+        mCalendarView.setOnMonthChangeListener(this);
+        mCalendarView.setOnDateLongClickListener(this);
     }
 
     @Override

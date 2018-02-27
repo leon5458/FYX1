@@ -58,7 +58,7 @@ public class HpFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.hp_city:
                 Intent cityIntent = new Intent(mActivity, CityActivity.class);
-//                cityIntent.putExtra("city", app.getCity());
+
                 startActivityForResult(cityIntent, CityActivity.CityCode);
                 break;
         }
@@ -85,6 +85,15 @@ public class HpFragment extends BaseFragment {
         multiHomeAdapter = new MultiHomeAdapter(mActivity, list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(multiHomeAdapter);
+
+
+        multiHomeAdapter.setOnItemClickListner(new MultiHomeAdapter.OnItemClickListner() {
+            @Override
+            public void click(int position) {
+
+            }
+        });
+
         multiHomeAdapter.setCallBack(new MultiHomeAdapter.CallBack() {
             @Override
             public void back(RecyclerView.ViewHolder holder, int position, int type) {
@@ -109,6 +118,7 @@ public class HpFragment extends BaseFragment {
         smartRefreshLayout.setEnableLoadmore(true);
 
     }
+
 
     private void initItem4() {
         Hpbean item4 = new Hpbean();
@@ -137,7 +147,15 @@ public class HpFragment extends BaseFragment {
 
 
     private void homeItem4(WViewHolder wViewHolder) {
-
+        /**
+         * 监听事件
+         */
+//        wViewHolder.getView(R.id.).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
     }
 
     private void homeItem3(WViewHolder wViewHolder) {

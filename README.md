@@ -31,7 +31,8 @@ compile 'com.github.Othershe:NiceDialog:1.1.4' <br>
 可以用RecyclerView 也可以用 FlexboxLayout这个个人感觉很适合 <br>
 使用的时候导入: compile 'com.google.android:flexbox:0.2.6' <br>
 
-![baidu](https://github.com/leon5458/FYX1/blob/master/img/Information.gif) 
+![baidu](https://github.com/leon5458/FYX1/blob/master/img/Information.gif)
+定时定位使用的是WaveSideBar
 
 全部gif图片显示在img中可以查看效果图 <br>
 日历: <br>

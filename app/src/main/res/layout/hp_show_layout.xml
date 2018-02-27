@@ -11,7 +11,7 @@
         android:layout_height="260dp"
         android:background="@drawable/white_round_corner_bg"
         android:gravity="center"
-        android:text="提示 \n 弹框以及其他的总结,都在活动的fragment界面中,其余界面不建议参看,有什么其他的问题我们在互相讨论qq:919633712"
+        android:text="提示 \n 弹框以及其他的总结,都在行动的fragment界面中,其余界面不建议参看,有什么其他的问题我们在互相讨论qq:919633712"
         android:textSize="15sp" />
 
     <ImageView
