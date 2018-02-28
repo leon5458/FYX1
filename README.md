@@ -9,30 +9,41 @@
 PicerView使用: <br>
 引入: compile 'com.contrarywind:Android-PickerView:3.2.7' <br>
 
-![baidu](https://github.com/leon5458/FYX1/blob/master/img/PickerView.gif)  
+![PickerView](https://github.com/leon5458/FYX1/blob/master/img/PicerView.gif)
 
 NiceDialog 使用引入: <br>
 compile 'com.github.Othershe:NiceDialog:1.1.4' <br>
 
-![baidu](https://github.com/leon5458/FYX1/blob/master/img/NiceDialog.gif)  
+![NiceDialog](https://github.com/leon5458/FYX1/blob/master/img/NiceDialog.gif)  
 
 布局如有不一样的地方可以自定义修改,中间弹框内容多的添加滚动即可 <br>
 弹框可以用BottomPopWindow ,AlertDialog ,都写好放在utils下面,其他的就没写了. <br>
 进度条使用: <br>
 这个需要修改就导入了stepview库,使用时候图片,进度方向修改即可 <br>
 
-![baidu](https://github.com/leon5458/FYX1/blob/master/img/StepView.gif) 
+![StepView](https://github.com/leon5458/FYX1/blob/master/img/StepView.gif) <br><br>
 
 信息输入框: <br>
 在View里面PswText导入 即可  <br>
+![PswText](https://github.com/leon5458/FYX1/blob/master/img/Information.gif)<br>
+
 更换理由: <br>
 使用CheckBox前面的图片可以自定义修改 <br>
+![CheckBox](https://github.com/leon5458/FYX1/blob/master/img/Change.gif)<br>  
+
+
 标签: <br>
-可以用RecyclerView 也可以用 FlexboxLayout这个个人感觉很适合 <br>
+可以用FlexboxLayout这个个人感觉很适合 <br>
 使用的时候导入: compile 'com.google.android:flexbox:0.2.6' <br>
 
-![baidu](https://github.com/leon5458/FYX1/blob/master/img/Information.gif)
-定时定位使用的是WaveSideBar
+![label](https://github.com/leon5458/FYX1/blob/master/img/label.gif) <br>  
+
+
+城市定位<br>
+定位使用的WaveSideBar,城市json是以前用过的,如感觉不合适可以在修改<br>
+
+![bar](https://github.com/leon5458/FYX1/blob/master/img/city.gif) <br>    
+
 
 全部gif图片显示在img中可以查看效果图 <br>
 日历: <br>
