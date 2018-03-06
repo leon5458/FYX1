@@ -45,7 +45,7 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 
 全部gif图片显示在img中可以查看效果图   
 
-###日历:   
+### 日历:   
 日历导入的是一个calendarview库,日历可以伸缩,在CalendarView里面如有需要可以取消注释
 日历下的时间是用recyclerview做的,适配器自己简单的写了一个项目中使用不一样适合,详情
 可以参看代码 下面是效果图  
