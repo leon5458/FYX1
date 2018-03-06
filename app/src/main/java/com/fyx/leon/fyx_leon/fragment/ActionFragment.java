@@ -2,6 +2,8 @@ package com.fyx.leon.fyx_leon.fragment;
 
 import android.content.Intent;
 import android.view.View;
+
+import com.fyx.leon.fyx_leon.ui.GalleryActivity;
 import com.fyx.leon.fyx_leon.ui.R;
 import com.fyx.leon.fyx_leon.ui.BombboxActivity;
 import com.fyx.leon.fyx_leon.ui.CalendarActivity;
@@ -31,7 +33,7 @@ public class ActionFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.one, R.id.two, R.id.three, R.id.four})
+    @OnClick({R.id.one, R.id.two, R.id.three, R.id.four,R.id.five})
     public void OnClick(View v) {
         Intent intent = new Intent();
         switch (v.getId()) {
@@ -52,6 +54,10 @@ public class ActionFragment extends BaseFragment {
                 intent.setClass(mActivity, CalendarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.five:
+                intent.setClass(mActivity, GalleryActivity.class);
+                startActivity(intent);
+
         }
 
 

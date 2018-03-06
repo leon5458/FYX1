@@ -71,10 +71,11 @@ public class CarServiceFragment extends BaseFragment {
 
             }
         });
-        bgaBanner.setData(Arrays.asList("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517803186891&di=227192cc653223fc1bf50efb292ac3de&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F80%2F28%2F77958PICwVd.jpg"
-                , "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517803582035&di=1f5c8ffb314ab830712208f92f365622&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1405%2F26%2Fc3%2F34643401_34643401_1401094541484_mthumb.jpg"
-                , "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=693437913,4211414746&fm=27&gp=0.jpg"),
-                Arrays.asList("距离下次保养换有39天", "日出2", "日出3"));
+       //网络图片
+       bgaBanner.setData(Arrays.asList("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=693437913,4211414746&fm=27&gp=0.jpg"
+                , "http://qianming.vipyl.com/user/webimg/201771/20177194315260.jpg"
+                , "http://img0.imgtn.bdimg.com/it/u=2054792767,3910355223&fm=27&gp=0.jpg"),
+                Arrays.asList("距离下次保养换有39天", "小清新1", "小清新2"));
 
     }
 

@@ -45,8 +45,15 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 
 全部gif图片显示在img中可以查看效果图   
 
-日历:   
-好像andorid不用写了,也就没有写.全部内容都在行动Fragemnt中,就不在想ios那样一个一个分开写了,   
+###日历:   
+日历导入的是一个calendarview库,日历可以伸缩,在CalendarView里面如有需要可以取消注释
+日历下的时间是用recyclerview做的,适配器自己简单的写了一个项目中使用不一样适合,详情
+可以参看代码 下面是效果图  
+![calendar](https://github.com/leon5458/FYX1/blob/master/img/calendar.gif) 
+
+备注:画廊换在修改中属于动画的内容.  
+
+  
 
 
 

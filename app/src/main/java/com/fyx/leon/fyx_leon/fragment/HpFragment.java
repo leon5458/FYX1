@@ -5,8 +5,10 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.fyx.leon.fyx_leon.MyApplication;
 import com.fyx.leon.fyx_leon.adapter.FyxRecyclerAdapter;
 import com.fyx.leon.fyx_leon.adapter.MultiHomeAdapter;
@@ -19,11 +21,13 @@ import com.fyx.leon.fyx_leon.base.BaseFragment;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.bingoogolapple.bgabanner.BGABanner;
 
 /**
  * <p>文件描述：<p>
@@ -39,6 +43,8 @@ public class HpFragment extends BaseFragment {
     SmartRefreshLayout smartRefreshLayout;
     @BindView(R.id.hp_city)
     TextView city;
+    @BindView(R.id.hp_banner)
+    BGABanner bgaBanner;
 
     MultiHomeAdapter multiHomeAdapter;
 
@@ -78,6 +84,25 @@ public class HpFragment extends BaseFragment {
     @Override
     public void initView() {
         ButterKnife.bind(this, mView);
+        bgaBanner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
+            @Override
+            public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {
+                Glide.with(getActivity())
+                        .load(model)
+                        .placeholder(R.drawable.indicator_background)
+                        .error(R.drawable.indicator_background)
+                        .centerCrop()
+                        .dontAnimate()
+                        .into(itemView);
+
+            }
+        });
+        //网络图片
+        bgaBanner.setData(Arrays.asList("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=693437913,4211414746&fm=27&gp=0.jpg"
+                , "http://qianming.vipyl.com/user/webimg/201771/20177194315260.jpg"
+                , "http://img0.imgtn.bdimg.com/it/u=2054792767,3910355223&fm=27&gp=0.jpg"),
+                Arrays.asList("距离下次保养换有39天", "小清新1", "小清新2"));
+
         initItem1();
         initItem2();
         initItem3();

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fyx.leon.fyx_leon.ui">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.fyx.leon.fyx_leon.MyApplication"
         android:allowBackup="true"
@@ -32,6 +34,7 @@
         <activity android:name=".TableActivity" />
         <activity android:name=".ForgetPwActivity"/>
         <activity android:name=".CityActivity"/>
+        <activity android:name=".GalleryActivity"/>
 
     </application>
 
