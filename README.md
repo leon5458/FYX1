@@ -65,12 +65,12 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 下面是效果图  
 ![mark](https://github.com/leon5458/FYX1/blob/master/img/right.gif)  
 
-### 侧滑栏那:  
+### 侧滑栏:  
 侧滑栏使用系统自带的Drawablelayout 效果图如下  
 ![mark](https://github.com/leon5458/FYX1/blob/master/img/drawable.gif)  
 
-### 弹框修改后的效果  
-![bomb](https://github.com/leon5458/FYX1/blob/master/img/bomb.gif)
+### 弹框修改后的效果    
+![bomb](https://github.com/leon5458/FYX1/blob/master/img/all.gif)
    
   
    

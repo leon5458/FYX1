@@ -102,12 +102,12 @@ public class GalleryActivity extends BaseActivity {
                 view = convertView;
             }
 
-//            view.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    ShowCenterDialog();
-//                }
-//            });
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ShowCenterDialog();
+                }
+            });
 
             return view;
         }

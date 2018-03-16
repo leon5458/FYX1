@@ -46,27 +46,29 @@ public class AddViewActivity extends BaseActivity {
 
     private void initData() {
         List<Integer> list = new ArrayList<>();
-//        for(int i=1;i<10;i++){
-//            list.add(R.mipmap.img);
-//        }
+        for (int i = 1; i < 4; i++) {
+            list.add(R.mipmap.img);
+        }
 
-        list.add(R.mipmap.img);
-        list.add(R.mipmap.img);
 
         //设置OffscreenPageLimit
         mViewPager.setOffscreenPageLimit(Math.min(list.size(), 3));
         mPagerAdapter.addAll(list);
     }
+
     @Override
     protected void setListener() {
     }
+
     @Override
     protected void getData() {
     }
+
     public static class TubatuAdapter extends RecyclingPagerAdapter {
 
         private final List<Integer> mList;
         private final Context mContext;
+
         public TubatuAdapter(Context context) {
             mList = new ArrayList<>();
             mContext = context;
@@ -79,7 +81,7 @@ public class AddViewActivity extends BaseActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup container) {
-            ImageView imageView ;
+            ImageView imageView;
             if (convertView == null) {
                 imageView = new ImageView(mContext);
             } else {
@@ -90,15 +92,20 @@ public class AddViewActivity extends BaseActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   addView();
+                    addView();
                 }
             });
             return imageView;
         }
+
         private void addView() {
+            List<Integer> list = new ArrayList<>();
+
+
         }
+
         @Override
-        public int getCount()      {
+        public int getCount() {
             return mList.size();
         }
     }
