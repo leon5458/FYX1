@@ -6,6 +6,15 @@
         android:id="@+id/action_settings"
         android:title="已取消预约"
         app:showAsAction="never" />
+    <item
+
+        android:title="已取消预约"
+        app:showAsAction="never" />
+
+    <item
+
+        android:title="已取消预约"
+        app:showAsAction="never" />
 
 </menu>
 
