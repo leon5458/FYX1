@@ -35,6 +35,10 @@
         <activity android:name=".ForgetPwActivity"/>
         <activity android:name=".CityActivity"/>
         <activity android:name=".GalleryActivity"/>
+        <activity android:name=".ProgressDialogActivity"/>
+        <activity android:name=".RightActivity"/>
+        <activity android:name=".AddViewActivity"/>
+        <activity android:name=".MenuActivity"/>
 
     </application>
 

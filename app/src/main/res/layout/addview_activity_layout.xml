@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/page_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_marginTop="50dp"
-        android:id="@+id/ga_container"
+        android:id="@+id/add_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:clipChildren="false">
+        android:clipChildren="false"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
 
         <com.fyx.leon.fyx_leon.view.clipPage.ClipViewPager
-            android:id="@+id/ga_viewpager"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/add_viewpager"
             android:layout_width="200dp"
-            android:layout_height="300dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
             android:overScrollMode="never" />
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/ga_indicator"
+        android:id="@+id/add_indicator"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="15dp"
+        android:background="@color/white"
         android:gravity="center"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        android:paddingBottom="10dp" />
 
 </LinearLayout>

@@ -10,8 +10,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 public class FyxLoginActivity extends BaseActivity {
-    @BindView(R.id.cancel_accout)
-    ImageView Image_Cancel;
+
     @BindView(R.id.accout)
     EditText Edit_Accout;
     @BindView(R.id.show_pw)
@@ -35,18 +34,13 @@ public class FyxLoginActivity extends BaseActivity {
 
     @Override
     protected void getData() {
-       if(Edit_Accout.equals("请输入账号")){
-           Image_Cancel.setVisibility(View.GONE);
-       }else{
-           Image_Cancel.setVisibility(View.VISIBLE);
-       }
        if (Edit_Pw.equals("请输入密码")){
            Image_Show.setVisibility(View.GONE);
            }else{
            Image_Show.setVisibility(View.VISIBLE);
        }
     }
-    @OnClick({R.id.show_pw,R.id.cancel_accout,R.id.forget_pw,R.id.fyx_login})
+    @OnClick({R.id.show_pw,R.id.forget_pw,R.id.fyx_login})
     public void OnClick(View v){
         switch (v.getId()){
             case R.id.show_pw:
@@ -62,9 +56,6 @@ public class FyxLoginActivity extends BaseActivity {
                     Edit_Pw.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     Edit_Pw.setSelection(Edit_Pw.getText().length());
                 }
-                break;
-            case R.id.cancel_accout:
-                Edit_Accout.setText("");
                 break;
             case R.id.fyx_login:
                 startActivity(new Intent(this,MainActivity.class));

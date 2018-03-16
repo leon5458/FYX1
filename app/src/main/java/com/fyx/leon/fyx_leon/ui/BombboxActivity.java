@@ -1,19 +1,27 @@
 package com.fyx.leon.fyx_leon.ui;
 
+import android.content.Intent;
+import android.graphics.Camera;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
 import com.bigkoo.pickerview.listener.CustomListener;
+import com.fyx.leon.fyx_leon.adapter.FyxRecyclerAdapter;
 import com.fyx.leon.fyx_leon.base.BaseActivity;
+import com.fyx.leon.fyx_leon.base.WViewHolder;
 import com.fyx.leon.fyx_leon.bean.JsonBean;
+import com.fyx.leon.fyx_leon.utils.BottomPopWindow;
 import com.fyx.leon.fyx_leon.utils.GetJsonDataUtil;
 import com.fyx.leon.fyx_leon.utils.ToastUtils;
 import com.google.gson.Gson;
@@ -153,39 +161,54 @@ public class BombboxActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.bomb_one, R.id.bomb_two, R.id.bomb_three, R.id.bomb_four, R.id.bomb_five, R.id.bomb_six,
-            R.id.bomb_seven, R.id.bomb_eight, R.id.bomb_nine, R.id.bomb_ten, R.id.bomb11, R.id.bomb12, R.id.bomb13, R.id.bomb14, R.id.bomb15})
+    @OnClick({R.id.bomb_one, R.id.bomb_two, R.id.regist, R.id.bomb_four, R.id.change_shop, R.id.call_phone,R.id.cancel_car_server,R.id.birthday,
+            R.id.bottom_cancel_carserver, R.id.share, R.id.bomb_nine, R.id.bomb_ten, R.id.bomb11, R.id.bomb12, R.id.bomb13, R.id.bomb14, R.id.bomb15,
+            R.id.order,R.id.province,R.id.camera,R.id.progressbar,R.id.menu,R.id.light})
     public void OnClick(View v) {
         switch (v.getId()) {
+            case R.id.light:
+                Light();
+                break;
+            case R.id.menu:
+                Intent intent = new Intent(BombboxActivity.this,MenuActivity.class);
+                startActivity(intent);
+                break;
             case R.id.bomb_one:
                 BombOne();
                 break;
             case R.id.bomb_two:
                 BombTwo();
                 break;
-            case R.id.bomb_three:
+            case R.id.regist:
                 BombThree();
                 break;
             case R.id.bomb_four:
                 BombFour();
                 break;
-            case R.id.bomb_five:
-                BombFive();
+            case R.id.change_shop:
+                ChangeShop();
                 break;
-            case R.id.bomb_six:
+            case R.id.cancel_car_server:
+                CancelCarSerVer();
+                break;
+            case R.id.call_phone:
                 BombSix();
                 break;
-            case R.id.bomb_seven:
-                BombSeven();
+            case R.id.birthday:
+                Birth();
                 break;
-            case R.id.bomb_eight:
-                BombEight();
+            case R.id.bottom_cancel_carserver:
+                BottomCancelCarSerVer();
+                break;
+            case R.id.share:
+                Share();
                 break;
             case R.id.bomb_nine:
                 BombNine();
                 break;
             case R.id.bomb_ten:
-                BombTen();
+                View view3 = LayoutInflater.from(BombboxActivity.this).inflate(R.layout.toast_item3, null);
+                new ToastUtils(this, view3, Toast.LENGTH_LONG).show();
                 break;
             case R.id.bomb11:
                 View view1 = LayoutInflater.from(BombboxActivity.this).inflate(R.layout.toast_item2, null);
@@ -205,9 +228,102 @@ public class BombboxActivity extends BaseActivity {
             case R.id.bomb15:
                 Skidding();
                 break;
-
+            case R.id.order:
+                Order();
+                break;
+            case R.id.province:
+                Province();
+                break;
+            case R.id.camera:
+                CameraPhoto();
+                break;
+            case R.id.progressbar:
+                Progress();
+                break;
         }
     }
+
+    private void Light() {
+        NiceDialog.init()
+                .setLayoutId(R.layout.light_layout)
+                .setConvertListener(new ViewConvertListener() {
+                    @Override
+                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
+
+                    }
+                })
+                .setWidth(260)
+                .setOutCancel(true)
+                .setAnimStyle(R.style.EnterExitAnimation)
+                .show(getSupportFragmentManager());
+    }
+
+
+    private void Progress() {
+        NiceDialog.init()
+                .setLayoutId(R.layout.progress_layout)
+                .setConvertListener(new ViewConvertListener() {
+                    @Override
+                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
+
+                    }
+                })
+                .setWidth(210)
+                .setOutCancel(true)
+                .setAnimStyle(R.style.EnterExitAnimation)
+                .show(getSupportFragmentManager());
+    }
+
+
+
+    private void CameraPhoto() {
+        View view=LayoutInflater.from(BombboxActivity.this).inflate(R.layout.cameraphoto_item,null,false);
+        BottomPopWindow.getInstance().pop(BombboxActivity.this,view).show();
+    }
+
+    String province[] = new String[]{
+            "沪", "皖", "京", "津", "渝", "冀", "豫", "云", "辽",
+            "黑", "湘", "鲁", "新", "苏", "浙", "赣", "卾",
+            "桂", "甘", "晋", "蒙", "陕", "吉", "闽", "粤",
+            "贵", "青", "藏", "川", "宁", "琼"
+    };
+
+    private void Province() {
+        RecyclerView recyclerView = new RecyclerView(this);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,8));
+        FyxRecyclerAdapter adapter = new FyxRecyclerAdapter(this,R.layout.pop_province_item,Arrays.asList(province));
+        recyclerView.setAdapter(adapter);
+        adapter.setCallBack(new FyxRecyclerAdapter.CallBack() {
+            @Override
+            public <T> void convert(WViewHolder holder, T bean, int position) {
+                holder.setText(R.id.province_text, (String) bean);
+            }
+        });
+        adapter.setOnItemClickListner(new FyxRecyclerAdapter.OnItemClickListner() {
+            @Override
+            public void onItemClickListner(View v, int position) {
+                BottomPopWindow.getInstance().dismiss();
+            }
+        });
+        BottomPopWindow.getInstance().pop(this, recyclerView).show();
+    }
+    private void Order() {
+        NiceDialog.init()
+                .setLayoutId(R.layout.order_layout)
+                .setConvertListener(new ViewConvertListener() {
+                    @Override
+                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
+
+                    }
+                })
+                .setWidth(260)
+                .setOutCancel(true)
+                .setAnimStyle(R.style.EnterExitAnimation)
+                .show(getSupportFragmentManager());
+    }
+
+
+
 
     private ArrayList<String> food = new ArrayList<>();
     private ArrayList<String> clothes = new ArrayList<>();
@@ -218,7 +334,6 @@ public class BombboxActivity extends BaseActivity {
         skidding = new OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int options1, int options2, int options3, View v) {
-
 
             }
         })
@@ -318,26 +433,26 @@ public class BombboxActivity extends BaseActivity {
         return format.format(date);
     }
 
-    private void BombTen() {
-        NiceDialog.init()
-                .setLayoutId(R.layout.bombten_layout)
-                .setConvertListener(new ViewConvertListener() {
-                    @Override
-                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
-                        holder.setOnClickListener(R.id.close, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                dialog.dismiss();
-                            }
-                        });
-                    }
-                })
-                .setWidth(210)
-                .setOutCancel(true)
-                .setAnimStyle(R.style.EnterExitAnimation)
-                .show(getSupportFragmentManager());
-
-    }
+//    private void BombTen() {
+//        NiceDialog.init()
+//                .setLayoutId(R.layout.bombten_layout)
+//                .setConvertListener(new ViewConvertListener() {
+//                    @Override
+//                    public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
+//                        holder.setOnClickListener(R.id.close, new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                dialog.dismiss();
+//                            }
+//                        });
+//                    }
+//                })
+//                .setWidth(210)
+//                .setOutCancel(true)
+//                .setAnimStyle(R.style.EnterExitAnimation)
+//                .show(getSupportFragmentManager());
+//
+//    }
 
     private void BombNine() {
         NiceDialog.init()
@@ -354,7 +469,7 @@ public class BombboxActivity extends BaseActivity {
                 .show(getSupportFragmentManager());
     }
 
-    private void BombEight() {
+    private void Share() {
         NiceDialog.init()
                 .setLayoutId(R.layout.bombeight_layout)
                 .setConvertListener(new ViewConvertListener() {
@@ -374,7 +489,7 @@ public class BombboxActivity extends BaseActivity {
 
     }
 
-    private void BombSeven() {
+    private void BottomCancelCarSerVer() {
         NiceDialog.init()
                 .setLayoutId(R.layout.bombseven_layout)
                 .setConvertListener(new ViewConvertListener() {
@@ -398,14 +513,28 @@ public class BombboxActivity extends BaseActivity {
     private void BombSix() {
         ConfirmDialog.newInstance("2")
                 .setMargin(60)
-                .setOutCancel(false)
+                .setOutCancel(true)
                 .show(getSupportFragmentManager());
     }
 
-    private void BombFive() {
+   private void CancelCarSerVer(){
+       ConfirmDialog.newInstance("3")
+               .setMargin(60)
+               .setOutCancel(true)
+               .show(getSupportFragmentManager());
+   }
+
+   private void Birth(){
+       ConfirmDialog.newInstance("4")
+               .setMargin(60)
+               .setOutCancel(true)//设置点击外面不消失,可以用false
+               .show(getSupportFragmentManager());
+   }
+
+    private void ChangeShop() {
         ConfirmDialog.newInstance("1")
                 .setMargin(60)
-                .setOutCancel(false)
+                .setOutCancel(true)
                 .show(getSupportFragmentManager());
     }
 
@@ -486,7 +615,7 @@ public class BombboxActivity extends BaseActivity {
                         });
                     }
                 })
-                .setWidth(210)
+                .setWidth(240)
                 .setOutCancel(true)
                 .setAnimStyle(R.style.EnterExitAnimation)
                 .show(getSupportFragmentManager());
@@ -524,27 +653,41 @@ public class BombboxActivity extends BaseActivity {
         @Override
         public void convertView(ViewHolder holder, final BaseNiceDialog dialog) {
             if ("1".equals(type)) {
-                holder.setText(R.id.message, "取消车服务,您需要先选择保养预约时间");
-                holder.setText(R.id.cancel, "我在想想");
-                holder.setText(R.id.ok, "去选择");
+                holder.setText(R.id.message, "确认更换专属销售店?");
+                holder.setText(R.id.cancel, "再想想");
+                holder.setText(R.id.ok, "确认更换");
+                holder.setTextColor(R.id.ok, (Color.parseColor("#0babfe")));
             } else if ("2".equals(type)) {
                 holder.setText(R.id.message, "(021) -6555 5570");
                 holder.setText(R.id.cancel, "取消");
                 holder.setText(R.id.ok, "呼叫");
-            }
-            holder.setOnClickListener(R.id.cancel, new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
+                holder.setTextColor(R.id.ok, (Color.parseColor("#0babfe")));
+            } else if ("3".equals(type)) {
+                holder.setText(R.id.message, "取消取车服务,您需要先选择保养预约时间");
+                holder.setText(R.id.cancel, "再想想");
+                holder.setText(R.id.ok, "确认更换");
+                holder.setTextColor(R.id.ok, (Color.parseColor("#0babfe")));
 
-            holder.setOnClickListener(R.id.ok, new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
+            } else if ("4".equals(type)) {
+                holder.setText(R.id.message, "生日保存以后不能修改,是否确定保存?");
+                holder.setText(R.id.cancel, "再想想");
+                holder.setText(R.id.ok, "确认保存");
+                holder.setTextColor(R.id.ok, (Color.parseColor("#0babfe")));
+
+                holder.setOnClickListener(R.id.cancel, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                holder.setOnClickListener(R.id.ok, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+            }
         }
     }
 }

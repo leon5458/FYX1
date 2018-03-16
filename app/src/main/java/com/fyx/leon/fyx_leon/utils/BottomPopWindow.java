@@ -19,21 +19,15 @@ import java.util.List;
  * <p>版本号：1<p>
  */
 public class BottomPopWindow {
-
     static BottomSheetDialog bottomSheetDialog;
-
-
     public void dismiss() {
         bottomSheetDialog.dismiss();
     }
-
     public BottomPopWindow pop(Context context, View v) {
         bottomSheetDialog = new BottomSheetDialog(context);
         bottomSheetDialog.setContentView(v);
         return this;
     }
-
-
     public void show() {
         bottomSheetDialog.show();
     }

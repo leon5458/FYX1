@@ -2,21 +2,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
     android:gravity="center_horizontal"
+    android:background="@android:color/transparent"
     android:orientation="vertical">
 
-    <TextView
+    <android.support.v4.widget.NestedScrollView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
         android:background="@drawable/white_round_corner_bg"
-        android:layout_width="210dp"
-        android:layout_height="260dp"
-        android:text="协议 \n 一 特别提示\n 1 ooooooooooooooooo \n 2oooooooooooooooo\n 300000000000000"/>
+        android:layout_height="280dp">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取送车服务协议"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="一丶特别提示"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.使用Picture前请关闭硬件加速，以免引起不必要的问题！使用Picture前请关闭硬件加速，以免引起不必要的问题！"
+                android:textColor="@color/gray"
+                android:textSize="11dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 
     <ImageView
         android:id="@+id/close"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:src="@mipmap/icon_close"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_close" />
 
 </LinearLayout>

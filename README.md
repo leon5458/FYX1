@@ -51,7 +51,41 @@ compile 'com.github.Othershe:NiceDialog:1.1.4'
 可以参看代码 下面是效果图  
 ![calendar](https://github.com/leon5458/FYX1/blob/master/img/calendar.gif) 
 
-备注:画廊换在修改中属于动画的内容.  
+### 画廊效果: 
+ 画廊的使用自定义的clipviewpager文件都放在view文件下面的clipPage里面,使用的时候
+ 复制过去即可,下面是效果图
+![gallery](https://github.com/leon5458/FYX1/blob/master/img/Gallery.gif)  
+### 加载效果:  
+这个使用的自定义的progressDialog 修改颜色  
+下面是效果图  
+![pro](https://github.com/leon5458/FYX1/blob/master/img/progress.gif)   
+
+### 对号绘制:          
+绘制是自定义view ,RightMark 放在view文件夹里面  
+下面是效果图  
+![mark](https://github.com/leon5458/FYX1/blob/master/img/right.gif)  
+
+### 侧滑栏那:  
+侧滑栏使用系统自带的Drawablelayout 效果图如下  
+![mark](https://github.com/leon5458/FYX1/blob/master/img/drawable.gif)  
+
+### 弹框修改后的效果  
+![bomb](https://github.com/leon5458/FYX1/blob/master/img/bomb.gif)
+   
+  
+   
+  
+    
+   
+  
+ 
+  
+  
+
+
+  
+
+  
 
   
 

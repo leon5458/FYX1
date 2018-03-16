@@ -43,24 +43,19 @@
                 android:layout_weight="0.1"
                 android:src="@mipmap/jifen" />
 
-            <EditText
+            <com.fyx.leon.fyx_leon.utils.ClearEditText
                 android:id="@+id/accout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.8"
                 android:background="@null"
+                android:drawableRight="@mipmap/jifen"
                 android:maxLines="20"
                 android:hint="请输入账号"
                 android:inputType="number" />
 
-            <ImageView
-                android:id="@+id/cancel_accout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:visibility="gone"
-                android:src="@mipmap/jifen" />
+
         </LinearLayout>
 
 

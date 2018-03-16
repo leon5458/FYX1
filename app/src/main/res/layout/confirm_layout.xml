@@ -10,7 +10,9 @@
 
     <TextView
         android:id="@+id/message"
-        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"/>
 
     <View
@@ -23,10 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="40dp">
 
-        <View
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            android:background="#e6e6e6" />
 
         <TextView
             android:id="@+id/cancel"
@@ -35,6 +33,11 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="#333333" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6" />
 
         <TextView
             android:id="@+id/ok"

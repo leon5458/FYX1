@@ -104,7 +104,16 @@
     <item name="android:button">@drawable/checkbox_style</item>
     </style>
 
-   <!--城市定位-->
+    <style name="ProgressDialog_item">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--城市定位-->
     <declare-styleable name="WaveSideBar">
         <attr name="sidebar_lazy_respond" format="boolean" />
         <attr name="sidebar_text_size" format="dimension" />
@@ -120,5 +129,7 @@
             <enum name="right" value="2" />
         </attr>
     </declare-styleable>
+
+
 
 </resources>

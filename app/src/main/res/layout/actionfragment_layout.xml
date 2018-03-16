@@ -33,14 +33,14 @@
         android:text="信息输入框"/>
 
     <TextView
-        android:layout_marginTop="10dp"
         android:id="@+id/four"
-        android:padding="10dp"
-        android:gravity="center"
-        android:background="@color/gray"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="日历"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="日历" />
 
     <TextView
         android:layout_marginTop="10dp"
@@ -51,4 +51,35 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="画廊"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/six"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="进度框"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/seven"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="对号绘制"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/eight"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="添加框"/>
+
 </LinearLayout>

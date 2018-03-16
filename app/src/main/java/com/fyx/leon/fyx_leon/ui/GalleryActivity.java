@@ -1,25 +1,21 @@
 package com.fyx.leon.fyx_leon.ui;
-
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
+import com.bigkoo.pickerview.OptionsPickerView;
+import com.bigkoo.pickerview.listener.CustomListener;
 import com.fyx.leon.fyx_leon.base.BaseActivity;
-import com.fyx.leon.fyx_leon.bean.Card;
-import com.fyx.leon.fyx_leon.utils.CardTpye;
+import com.fyx.leon.fyx_leon.view.clipPage.ClipViewPager;
 import com.fyx.leon.fyx_leon.view.clipPage.GaPageTransformer;
 import com.fyx.leon.fyx_leon.view.clipPage.RecyclingPagerAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -32,11 +28,12 @@ import butterknife.ButterKnife;
  */
 public class GalleryActivity extends BaseActivity {
     @BindView(R.id.ga_viewpager)
-    ViewPager mViewPager;
-    @BindView(R.id.bc_indicator)
+    ClipViewPager mViewPager;
+    @BindView(R.id.ga_container)
+    RelativeLayout container;
+    @BindView(R.id.ga_indicator)
     LinearLayout indicatorLayout;
 
-    private TubatuAdapter mPagerAdapter;
 
     @Override
     protected int getLayout() {
@@ -48,70 +45,97 @@ public class GalleryActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
+
     @Override
     protected void setListener() {
+        updateIndicator(0);
+        mViewPager.setOffscreenPageLimit(3);
         mViewPager.setPageTransformer(true, new GaPageTransformer());
-        mPagerAdapter = new TubatuAdapter(this);
-        mViewPager.setAdapter(mPagerAdapter);
-        initData();
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+            @Override
+            public void onPageSelected(int position) {
+                updateIndicator(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        mViewPager.setAdapter(new GaAdapter(GalleryActivity.this));
     }
 
-    private void initData() {
-        List<Integer> list = new ArrayList<>();
-        list.add(R.mipmap.imgs);
-        list.add(R.mipmap.img);
-        list.add(R.mipmap.bg);
-        list.add(R.mipmap.bg);
-        list.add(R.mipmap.img);
-        list.add(R.mipmap.imgs);
-
-        list.add(R.mipmap.imgs);
-        list.add(R.mipmap.img);
-        list.add(R.mipmap.bg);
-        list.add(R.mipmap.bg);
-        list.add(R.mipmap.img);
-        list.add(R.mipmap.imgs);
-        //设置OffscreenPageLimit
-        mViewPager.setOffscreenPageLimit(Math.min(list.size(), 5));
-        mPagerAdapter.addAll(list);
+    List<ImageView> imgs = new ArrayList<>();
+    private void updateIndicator(int position) {
+        indicatorLayout.removeAllViews();
+        imgs.clear();
+        for (int i = 0; i < 3; i++) {
+            ImageView img = new ImageView(GalleryActivity.this);
+            if (i == position) img.setImageResource(R.mipmap.select);
+            else img.setImageResource(R.mipmap.unselect);
+            img.setPadding(10, 0, 10, 0);
+            imgs.add(img);
+            indicatorLayout.addView(img);
+        }
     }
 
     @Override
     protected void getData() {
-
     }
 
-    public static class TubatuAdapter extends RecyclingPagerAdapter {
-
-        private final List<Integer> mList;
+    class GaAdapter extends RecyclingPagerAdapter {
         private final Context mContext;
 
-        public TubatuAdapter(Context context) {
-            mList = new ArrayList<>();
+        public GaAdapter(Context context) {
             mContext = context;
-        }
-
-        public void addAll(List<Integer> list) {
-            mList.addAll(list);
-            notifyDataSetChanged();
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup container) {
-            ImageView imageView = null;
+            View view;
             if (convertView == null) {
-                imageView = new ImageView(mContext);
+                view = LayoutInflater.from(mContext).inflate(R.layout.viewpager_ga_item, null);
             } else {
-                imageView = (ImageView) convertView;
+                view = convertView;
             }
-            imageView.setTag(position);
-            imageView.setImageResource(mList.get(position));
-            return imageView;
+
+//            view.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    ShowCenterDialog();
+//                }
+//            });
+
+            return view;
         }
 
         @Override
-        public int getCount()      {
-            return mList.size();
+        public int getCount() {
+            return Integer.MAX_VALUE;
         }
+    }
+
+    private OptionsPickerView Show;
+
+    private void ShowCenterDialog() {
+      /*  *
+         * 注意自定义PickerView ,在布局中,LineayLayout这个不要删除,已经隐藏了,不影响布局,删除掉
+         * 会引起空指针异常
+         */
+        Show = new OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
+            @Override
+            public void onOptionsSelect(int options1, int options2, int options3, View v) {
+
+            }
+        }).setLayoutRes(R.layout.showcenterdialog_item, new CustomListener() {
+            @Override
+            public void customLayout(View v) {
+            }
+        }).isDialog(true).build();
+        Show.show();
+
     }
 }

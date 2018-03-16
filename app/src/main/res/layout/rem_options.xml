@@ -76,8 +76,9 @@
         android:id="@+id/tv_ok"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#E5E9EC"
+        android:background="@color/blue"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="确定"
         android:textSize="15sp" />
 
