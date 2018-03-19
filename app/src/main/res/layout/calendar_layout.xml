@@ -69,197 +69,184 @@
 
     </RelativeLayout>
 
-    <com.haibin.calendarview.CalendarLayout
-        android:id="@+id/calendarLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff"
-        android:orientation="vertical"
-        app:calendar_content_view_id="@+id/nestedScrollView"
-        app:default_status="shrink"
-        app:only_week_view="false">
+        android:layout_height="match_parent">
 
-<!--        <RelativeLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">-->
-<!--            <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="6dp">
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="上\n一\n周"/>
-
-                </android.support.v7.widget.CardView>-->
-
-
-
-        <com.haibin.calendarview.CalendarView
-            android:id="@+id/calendarView"
-            android:layout_centerHorizontal="true"
+        <TextView
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            app:current_day_lunar_text_color="#ff0000"
-            app:current_day_text_color="#ff0000"
-            app:current_month_lunar_text_color="#CFCFCF"
-            app:current_month_text_color="#333333"
-            app:lunar_text_size="10sp"
-            app:max_year="2022"
-            app:max_year_month="12"
-            app:min_year="2016"
-            app:min_year_month="9"
-            app:month_view_show_mode="mode_only_current"
-            app:other_month_lunar_text_color="#e1e1e1"
-            app:other_month_text_color="#e1e1e1"
-            app:scheme_lunar_text_color="#CFCFCF"
-            app:scheme_text="假"
-            app:scheme_text_color="#333"
-            app:scheme_theme_color="#128c4b"
-            app:selected_lunar_text_color="#128c4b"
-            app:selected_text_color="#128c4b"
-            app:selected_theme_color="#80cfcfcf"
-            app:week_background="#fff"
-            app:week_bar_height="46dp"
-            app:week_line_background="#00000000"
-            app:year_view_background="#f6f6f6"
-            app:year_view_day_text_color="#333333"
-            app:year_view_day_text_size="9sp"
-            app:year_view_month_text_color="#ff0000"
-            app:year_view_month_text_size="20sp"
-            app:year_view_scheme_color="#f17706" />
+            android:text="上\n一\n周" />
 
-<!--            <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_alignParentRight="true"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="6dp">
-                <TextView
-
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="下\n一\n周"/>
-
-            </android.support.v7.widget.CardView>-->
-
-     <!--   </RelativeLayout>-->
-
-
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/nestedScrollView"
+        <com.haibin.calendarview.CalendarLayout
+            android:id="@+id/calendarLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            app:calendar_content_view_id="@+id/nestedScrollView"
+            app:default_status="shrink"
+            app:only_week_view="false">
 
-            <LinearLayout
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#fff"
+                app:current_day_lunar_text_color="#ff0000"
+                app:current_day_text_color="#ff0000"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:lunar_text_size="10sp"
+                app:max_year="2022"
+                app:max_year_month="12"
+                app:min_year="2016"
+                app:min_year_month="9"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_lunar_text_color="#e1e1e1"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_lunar_text_color="#CFCFCF"
+                app:scheme_text="假"
+                app:scheme_text_color="#333"
+                app:scheme_theme_color="#128c4b"
+                app:selected_lunar_text_color="#128c4b"
+                app:selected_text_color="#128c4b"
+                app:selected_theme_color="#80cfcfcf"
+                app:week_background="#fff"
+                app:week_bar_height="46dp"
+                app:week_line_background="#00000000"
+                app:year_view_background="#f6f6f6"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="9sp"
+                app:year_view_month_text_color="#ff0000"
+                app:year_view_month_text_size="20sp"
+                app:year_view_scheme_color="#f17706" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <View
-                        android:layout_height="0.5dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="0.3"
-                        android:background="@color/black"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:id="@+id/moring"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="上午" />
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/afternoon"
-                        android:layout_width="0dp"
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.3"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/moring"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="上午" />
+
+                        <TextView
+                            android:id="@+id/afternoon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="下午" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0.5dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.3"
+                            android:background="@color/black" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_time"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.2"
+                        android:layout_margin="10dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="备注"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gray"
+                            android:paddingLeft="10dp"
+                            android:text="有希望的服务顾问或者更多要求,在这里告诉我们"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:padding="5dp"
-                        android:text="下午" />
-                    <View
-                        android:layout_height="0.5dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="0.3"
-                        android:background="@color/black"
-                        android:layout_gravity="center"/>
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="已选时间" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/details_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:text="20174" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </com.haibin.calendarview.CalendarLayout>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recy_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp" />
-
-
-               <LinearLayout
-                   android:layout_height="wrap_content"
-                   android:layout_width="match_parent"
-                   android:orientation="horizontal">
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="备注" />
-
-                   <TextView
-                       android:paddingLeft="10dp"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:background="@color/gray"
-                       android:text="有希望的服务顾问或者更多要求,在这里告诉我们"
-                       android:textSize="12sp"/>
-
-                   </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/gray" />
-
-                    <TextView
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="已选时间" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/gray" />
-
-                    <TextView
-                        android:paddingLeft="8dp"
-                        android:id="@+id/details_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="20174" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
-    </com.haibin.calendarview.CalendarLayout>
-
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="下\n一\n周" />
+    </RelativeLayout>
 
 </LinearLayout>
