@@ -34,11 +34,7 @@ public class FyxLoginActivity extends BaseActivity {
 
     @Override
     protected void getData() {
-       if (Edit_Pw.equals("请输入密码")){
-           Image_Show.setVisibility(View.GONE);
-           }else{
-           Image_Show.setVisibility(View.VISIBLE);
-       }
+
     }
     @OnClick({R.id.show_pw,R.id.forget_pw,R.id.fyx_login})
     public void OnClick(View v){

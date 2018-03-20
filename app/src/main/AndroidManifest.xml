@@ -39,6 +39,7 @@
         <activity android:name=".RightActivity"/>
         <activity android:name=".AddViewActivity"/>
         <activity android:name=".MenuActivity"/>
+        <activity android:name=".LMenuActivity"/>
 
     </application>
 

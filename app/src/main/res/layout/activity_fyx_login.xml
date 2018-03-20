@@ -76,7 +76,7 @@
                 android:layout_weight="0.1"
                 android:src="@mipmap/jifen" />
 
-            <EditText
+            <com.fyx.leon.fyx_leon.utils.ClearEditText
                 android:id="@+id/pw"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

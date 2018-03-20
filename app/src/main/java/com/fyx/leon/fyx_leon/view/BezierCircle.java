@@ -156,9 +156,7 @@ public class BezierCircle extends View {
             mInterpolatedTime = interpolatedTime;
             invalidate();
         }
-
     }
-
     /**
      * 开始动画
      */

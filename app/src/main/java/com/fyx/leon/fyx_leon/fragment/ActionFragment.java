@@ -5,6 +5,8 @@ import android.view.View;
 
 import com.fyx.leon.fyx_leon.ui.AddViewActivity;
 import com.fyx.leon.fyx_leon.ui.GalleryActivity;
+import com.fyx.leon.fyx_leon.ui.LMenuActivity;
+import com.fyx.leon.fyx_leon.ui.MenuActivity;
 import com.fyx.leon.fyx_leon.ui.ProgressDialogActivity;
 import com.fyx.leon.fyx_leon.ui.R;
 import com.fyx.leon.fyx_leon.ui.BombboxActivity;
@@ -67,7 +69,7 @@ public class ActionFragment extends BaseFragment {
                 startActivity(intent);//对号绘制
                 break;
             case R.id.eight:
-                intent.setClass(mActivity,AddViewActivity.class);
+                intent.setClass(mActivity,LMenuActivity.class);
                 startActivity(intent);//添加
                 break;
 
