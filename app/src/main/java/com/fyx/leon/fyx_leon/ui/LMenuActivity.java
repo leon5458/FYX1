@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.fyx.leon.fyx_leon.base.BaseActivity;
 import com.fyx.leon.fyx_leon.utils.lmenu.SlidingMenu;
+import com.fyx.leon.fyx_leon.view.AdhesionHorizontalLoader;
 import com.fyx.leon.fyx_leon.view.BezierCircle;
 
 /**
@@ -16,7 +17,7 @@ import com.fyx.leon.fyx_leon.view.BezierCircle;
  */
 public class LMenuActivity extends BaseActivity {
     private SlidingMenu mMenu;
-    private BezierCircle bezierCircle;
+    private AdhesionHorizontalLoader bezierCircle;
 
     @Override
     protected int getLayout() {
@@ -32,7 +33,7 @@ public class LMenuActivity extends BaseActivity {
 
     public void toggleMenu(View view) {
         mMenu.toggle();
-//        bezierCircle.startAnimation();
+        bezierCircle.startAnim();
     }
 
 
@@ -45,16 +46,16 @@ public class LMenuActivity extends BaseActivity {
     protected void getData() {
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        int action = event.getActionMasked();
-        switch (action) {
-            case MotionEvent.ACTION_MOVE:
-                bezierCircle.startAnimation();
-        }
-
-        return false;
-    }
+//    @Override
+//    public boolean onTouchEvent(MotionEvent event) {
+//        int action = event.getActionMasked();
+//        switch (action) {
+//            case MotionEvent.ACTION_MOVE:
+//                bezierCircle.startAnim();
+//        }
+//
+//        return false;
+//    }
 
 
 }

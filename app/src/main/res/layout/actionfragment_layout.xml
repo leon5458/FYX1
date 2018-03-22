@@ -80,6 +80,6 @@
         android:background="@color/gray"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="添加框"/>
+        android:text="侧滑栏"/>
 
 </LinearLayout>
